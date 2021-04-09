@@ -5,7 +5,7 @@
  * @link https://github.com/renekorss/Banklink/
  *
  * @author Rene Korss <rene.korss@gmail.com>
- * @copyright 2016-2019 Rene Korss
+ * @copyright 2016-2020 Rene Korss
  * @license MIT
  */
 namespace RKD\Banklink\EE;
@@ -29,14 +29,14 @@ class Nordea extends Banklink
      *
      * @var mixed
      */
-    protected $requestUrl = 'https://netbank.nordea.com/pnbepay/epayp.jsp';
+    protected $requestUrl = 'https://banklink.luminor.ee';
 
     /**
      * Test request url.
      *
      * @var mixed
      */
-    protected $testRequestUrl = 'https://netbank.nordea.com/pnbepaytest/epayp.jsp';
+    protected $testRequestUrl = 'https://banklink.luminor.ee/test';
 
     /**
      * Force Nordea class to use IPizza protocol.

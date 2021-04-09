@@ -1,11 +1,11 @@
 <?php
 
-namespace RKD\Banklink\Test\ECommerce;
+namespace RKD\Banklink\Test\Protocol;
 
 use LogicException;
-use UnexpectedValueException;
 use PHPUnit\Framework\TestCase;
 use RKD\Banklink\Protocol\ECommerce;
+use UnexpectedValueException;
 
 /**
  * Test suite for ECommerce protocol.
@@ -154,6 +154,6 @@ class ECommerceTest extends TestCase
     public function testSetAlgorithm()
     {
         $this->protocol->setAlgorithm(OPENSSL_ALGO_SHA256);
-        $this->assertEquals(OPENSSL_ALGO_SHA256, $this->protocol->getAlgorithm());
+        $this->assertSame(OPENSSL_ALGO_SHA256, $this->protocol->getAlgorithm());
     }
 }

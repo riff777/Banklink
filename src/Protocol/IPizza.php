@@ -5,7 +5,7 @@
  * @link https://github.com/renekorss/Banklink/
  *
  * @author Rene Korss <rene.korss@gmail.com>
- * @copyright 2016-2019 Rene Korss
+ * @copyright 2016-2020 Rene Korss
  * @license MIT
  */
 namespace RKD\Banklink\Protocol;
@@ -430,6 +430,7 @@ class IPizza implements ProtocolInterface
     public function getSignature(array $data, string $encoding = 'UTF-8') : string
     {
         $mac = $this->generateSignature($data, $encoding);
+        $signature = '';
 
         if (is_file($this->privateKey)) {
             $privateKey = openssl_pkey_get_private('file://'.$this->privateKey, $this->privateKeyPassword);
